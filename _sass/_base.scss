@@ -42,11 +42,15 @@ body {
     &:last-child {
       border-right: 0;
     }
-  }
-  .content {
     blockquote {
       border-left: 1px solid lightgray;
       padding-left: 1rem;
+    }
+  }
+  .content {
+    h1,
+    h1 + p {
+      color: $green;
     }
   }
   @include media-breakpoint-down(md) {
