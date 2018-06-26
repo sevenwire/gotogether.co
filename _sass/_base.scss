@@ -31,10 +31,19 @@ body {
   }
 }
 
-.home {
+section.home,
+section.page {
   background: white;
   display: flex;
   width: 60%;
+  @include media-breakpoint-down(md) {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    display: block;
+  }
+}
+
+section.home {
   .home-block {
     padding: 3rem;
     border-right: 1px solid lightgray;
@@ -46,18 +55,7 @@ body {
       border-left: 1px solid lightgray;
       padding-left: 1rem;
     }
-  }
-  .content {
-    h1,
-    h1 + p {
-      color: $green;
-    }
-  }
-  @include media-breakpoint-down(md) {
-    margin: 1rem;
-    width: calc(100% - 2rem);
-    display: block;
-    .home-block {
+    @include media-breakpoint-down(md) {
       width: 100%;
       border-right: 0;
       border-bottom: 1px solid lightgray;
@@ -65,5 +63,18 @@ body {
         border-bottom: 0;
       }
     }
+  }
+  .content {
+    h1,
+    h1 + p {
+      color: $green;
+    }
+  }
+}
+
+section.page {
+  padding: 3rem;
+  p:last-child {
+    margin-bottom: 0;
   }
 }
