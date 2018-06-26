@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=BioRhyme");
+@import "bootstrap/scss/bootstrap";
+
+html,
+body {
+  min-height: 100%;
+  background-image: url("/uploads/site-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "BioRhyme", serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  main.site {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.home {
+  background: white;
+  display: flex;
+  width: 60%;
+  .home-block {
+    padding: 3rem;
+    border-right: 1px solid lightgray;
+    width: 50%;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  .content {
+    blockquote {
+      border-left: 1px solid lightgray;
+      padding-left: 1rem;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    display: block;
+    .home-block {
+      width: 100%;
+      border-right: 0;
+      border-bottom: 1px solid lightgray;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
