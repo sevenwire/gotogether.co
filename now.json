@@ -1,4 +1,6 @@
 {
+  "name": "gotogether",
+  "alias": "gotogether.co",
   "type": "static",
   "static": {}
 }
